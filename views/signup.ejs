@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SolarMonitor - Login</title>
+
+    <!-- Material Icons CDN -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="./login.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="login-card">
+            <div class="login-logo"><span class="material-symbols-sharp warning">sunny</span>Solar<span class="warning">Monitor</span></div>
+            <div class="login-card-body">
+                <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4">Register with Us!</h1>
+                </div>
+                <form action="/signup" method="post">
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input type="text" class="form-control form-control-user" name="firstName"
+                                placeholder="First Name" required="">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control form-control-user" name="lastName"
+                                placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control form-control-user" name="email"
+                            placeholder="Email Address" required="">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input type="password" class="form-control form-control-user"
+                                name="password" placeholder="Password" required="">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control form-control-user"
+                                name="passwordConf" placeholder="Repeat Password" required="">
+                        </div>
+                    </div>
+                    <% if(locals.error) { %>
+                        <div class="text-center"><%= error %></div>
+                    <% } %>
+                    <input type="submit" value="Register Account" class="btn btn-primary btn-user btn-block">
+                    </form>
+                <hr>
+                <div class="text-center">
+                    <a class="small" href="/">Already have an account? Login!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
